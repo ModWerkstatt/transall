@@ -1,0 +1,79 @@
+function data()
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Transall Asset Set"),			
+		description = _("Statische Transall Flugzeuge.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "transall",
+			name = _("Transall C-160"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/construction/asset/transall/transall_1.tga",  "ui/construction/asset/transall/transall_2.tga", "ui/construction/asset/transall/transall_3.tga", "ui/construction/asset/transall/transall_4.tga", "ui/construction/asset/transall/transall_5.tga", "ui/construction/asset/transall/transall_6.tga", "ui/construction/asset/transall/transall_7.tga", "ui/construction/asset/transall/transall_8.tga", "ui/construction/asset/transall/transall_9.tga", "ui/construction/asset/transall/transall_10.tga", "ui/construction/asset/transall/transall_11.tga",},
+			tooltip = _("Transall als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+		
+		if params.transall == 0 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_1.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 1 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_2.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 2 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_3.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 3 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_4.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 4 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_5.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 5 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_6.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 6 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_7.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 7 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_8.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 8 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_9.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 9 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_10.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.transall == 10 then
+		result.models[#result.models+1] = {id = "asset/transall/transall_11.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

@@ -1,0 +1,895 @@
+local vec3 = require "vec3"
+local transf = require "transf"
+
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 14.05, 20, 11.9, },
+		bbMin = { -18.45, -20, 0.00, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/rumpf_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/glas.mtl", },
+						mesh = "vehicle/plane/transall/glas_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/innen_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/lichtanlage_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_links_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_rechts_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
+					{
+						_meshId = 11,
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bein_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bein_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bein_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.999, 0, 1.0507, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bein_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bein_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bein_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.8139, 0, 1.2366, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugbein.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugbein.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugbein_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52069, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6639, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.000284, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugrad_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 1.4943, 1.3922, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 3.1812, 0.99434, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_2b_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 3.4783, 0.81586, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -1.4943, 1.3922, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -3.1812, 0.99434, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_2b_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -3.4783, 0.81586, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugklappe.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugklappe.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugklappe_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.1541, 0, 0.49054, 1, },
+					},
+					{
+						animations = {
+							open_all_doors = {
+								params = {
+									id = "vehicle/plane/transall/heckklappe_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							close_all_doors = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/heckklappe_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/heckklappe_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -4.4448, 0, 0.98271, 1, },
+					},
+					{
+						animations = {
+							open_all_doors = {
+								params = {
+									id = "vehicle/plane/transall/heckklappe_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							close_all_doors = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/heckklappe_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/heckklappe_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.731, 0, 4.0732, 1, },
+					},
+					{
+						animations = {
+							open_all_doors = {
+								params = {
+									id = "vehicle/plane/transall/streben.ani",
+								},
+								type = "FILE_REF",
+							},
+							close_all_doors = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/streben.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/streben_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -7.2394, 0, 2.1243, 1, },
+					},
+					
+					
+					-----------Ruder--------------
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/seite_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( 0, -8.45, 0) , vec3.new( -16.124, 0, 7.4903 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hohe_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -91.5, -0.326, 0.00882) , vec3.new( -16.791, 4.1339, 4.882 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hohe_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -88.5, 0.266, 0.00711) , vec3.new( -16.791, -4.1339, 4.882 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_3_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -90, 0, 0) , vec3.new( -1.1013, 0, 4.7073 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_2_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -94.6, 4.6, 0.369) , vec3.new( -0.75509, 10.789, 5.0609 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_2_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -85.5, -4.63, 0.366) , vec3.new( -0.75508, -10.789, 5.0609 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/quer_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -87.2, -4.72, 0.288) , vec3.new( -0.013536, -17.424, 5.6254 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/quer_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -92.7, 4.72, 0.255) , vec3.new( -0.013548, 17.424, 5.6254 )),
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 100,
+		},
+		{
+			node = {
+				children = {
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/rumpf_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/glas.mtl", },
+						mesh = "vehicle/plane/transall/glas_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_links_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_rechts_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6639, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.000284, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugrad_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 1.4943, 1.3922, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 3.1812, 0.99434, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_links_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_links_2b_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, 3.4783, 0.81586, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -1.4943, 1.3922, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -3.1812, 0.99434, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/deckel_rechts_2b.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/deckel_rechts_2b_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.1434, -3.4783, 0.81586, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugklappe.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugklappe.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugklappe_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 8.1541, 0, 0.49054, 1, },
+					},
+					{
+						animations = {
+							open_all_doors = {
+								params = {
+									id = "vehicle/plane/transall/heckklappe_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							close_all_doors = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/heckklappe_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/heckklappe_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -4.4448, 0, 0.98271, 1, },
+					},
+					{
+						animations = {
+							open_all_doors = {
+								params = {
+									id = "vehicle/plane/transall/heckklappe_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							close_all_doors = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/heckklappe_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/heckklappe_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.731, 0, 4.0732, 1, },
+					},
+					
+					
+					-----------Ruder--------------
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/seite_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( 0, -8.45, 0) , vec3.new( -16.124, 0, 7.4903 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hohe_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -91.5, -0.326, 0.00882) , vec3.new( -16.791, 4.1339, 4.882 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hohe_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -88.5, 0.266, 0.00711) , vec3.new( -16.791, -4.1339, 4.882 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_3_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -90, 0, 0) , vec3.new( -1.1013, 0, 4.7073 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_2_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -94.6, 4.6, 0.369) , vec3.new( -0.75509, 10.789, 5.0609 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/klappe_2_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -85.5, -4.63, 0.366) , vec3.new( -0.75508, -10.789, 5.0609 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/quer_rechts_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -87.2, -4.72, 0.288) , vec3.new( -0.013536, -17.424, 5.6254 )),
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/quer_links_lod0.msh",
+						transf = transf.rotZYXTransl(transf.degToRad( -92.7, 4.72, 0.255) , vec3.new( -0.013548, 17.424, 5.6254 )),
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 100,
+			visibleTo = 500,
+		},
+		{
+			node = {
+				children = {
+					{
+						_meshId = 1,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/rumpf_lod2.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_links_lod2.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/prop_rechts_lod2.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_1.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_1_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6639, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/hauptrad_2.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/hauptrad_2_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.000284, 0, 0.5351, 1, },
+					},
+					{
+						animations = {
+							close_wheels = {
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+							open_wheels = {
+								forward = false,
+								params = {
+									id = "vehicle/plane/transall/bugrad.ani",
+								},
+								type = "FILE_REF",
+							},
+						},
+						_meshId = 11,
+						materials = { "vehicle/plane/transall/rumpf4.mtl", },
+						mesh = "vehicle/plane/transall/bugrad_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
+					},
+					
+					
+					-----------Ruder--------------
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 500,
+			visibleTo = 2000,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end
