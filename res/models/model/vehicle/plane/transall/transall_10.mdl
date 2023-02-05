@@ -429,6 +429,16 @@ return {
 						mesh = "vehicle/plane/transall/quer_links_lod0.msh",
 						transf = transf.rotZYXTransl(transf.degToRad( -92.7, 4.72, 0.255) , vec3.new( -0.013548, 17.424, 5.6254 )),
 					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
 				},
 				name = "RootNode",
 				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
@@ -763,6 +773,16 @@ return {
 						mesh = "vehicle/plane/transall/quer_links_lod0.msh",
 						transf = transf.rotZYXTransl(transf.degToRad( -92.7, 4.72, 0.255) , vec3.new( -0.013548, 17.424, 5.6254 )),
 					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
 				},
 				name = "RootNode",
 				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
@@ -849,6 +869,16 @@ return {
 						mesh = "vehicle/plane/transall/bugrad_lod0.msh",
 						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
 					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, -5.3522, 4.3061, 1, },
+					},
+					{
+						materials = { "vehicle/plane/transall/rumpf10.mtl","vehicle/plane/transall/transall_propeller.mtl", },
+						mesh = "vehicle/plane/transall/prop_blur_lod0.msh",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.8044, 5.3522, 4.3061, 1, },
+					},
 					
 					
 					-----------Ruder--------------
@@ -885,6 +915,7 @@ return {
 					},
 					landingLight = { 4, },
 					props = { 9, 10, },
+					propsB = { 35, 36, },
 					rudder = {
 						ids = { 27, },
 						maxAngle = 25,
@@ -914,6 +945,7 @@ return {
 					},
 					landingLight = { 4, },
 					props = { 7, 8, },
+					propsB = { 29, 30, },
 					rudder = {
 						ids = { 27, },
 						maxAngle = 25,
@@ -943,6 +975,7 @@ return {
 					},
 					landingLight = {  },
 					props = { 2, 3, },
+					propsB = { 7, 8, },
 					rudder = {
 						ids = {  },
 						maxAngle = 25,
@@ -959,13 +992,13 @@ return {
 			maxThrust = 170000,
 			timeToFullThrust = 5,
 			topSpeed = 142.5,
-			type = "SMALL",
+			type = "BIG",
 			weight = 29000,
 			wingArea = 160,
 		},
 		availability = {
 			yearFrom = 1963,
-			yearTo = 1980,
+			yearTo = 2022,
 		},
 		cost = {
 			price = -1,
