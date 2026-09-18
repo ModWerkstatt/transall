@@ -1,0 +1,22 @@
+{
+	"name": "Transall C-160",
+	"summary": "The package includes 11 paint schemes for the Transall.",
+	"description": "The Transall C-160 is a tactical transport aircraft developed in the 1960s by the Franco-German Transporter Alliance consortium and used by the air forces of France and Turkey. Germany phased out the C-160 at the end of 2021. The type designation of the shoulder-wing aircraft, which is powered by two propeller-driven turbines, is made up of the mission (C for cargo) and the wing area (160 m²).",
+	"localization" : {
+		"de": {
+			"name": "Transall C-160",
+			"summary": "Das Paket umfasst 11 Lackierung für die Transall.",
+			"description": "Die Transall C-160 ist ein in den 1960er Jahren vom deutsch-französischen Firmenkonsortium Transporter Allianz entwickeltes taktisches Transportflugzeug, das von den Luftstreitkräften Frankreichs und der Türkei eingesetzt wird. Deutschland musterte die C-160 Ende 2021 aus. Die Typenbezeichnung des von zwei Propellerturbinen angetriebenen Schulterdeckers setzt sich aus dem Einsatzzweck (C für Cargo) und der Flügelfläche (160 m²) zusammen."
+			}
+		},
+	"authors": [
+		{
+			"name": "ModWerkstatt",
+			"role": "CREATOR"
+		}
+	],
+	"tags": [
+		"Plane"
+	],
+	"url": "https://modwerkstatt.com/downloads/tpf3/transall"
+}
