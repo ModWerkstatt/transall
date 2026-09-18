@@ -1108,7 +1108,7 @@ return {
 							},
 							materials = { "mat/rumpf5.mtl", },
 							mesh = "msh/hauptrad_1_lod0.msh",
-							name = "hauptrad_1_lod0_14",
+							name = "hauptrad_1",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.6639, 0, 0.5351, 1, },
 						},
 						{ 
@@ -1129,7 +1129,7 @@ return {
 							},
 							materials = { "mat/rumpf5.mtl", },
 							mesh = "msh/hauptrad_2_lod0.msh",
-							name = "hauptrad_2_lod0_15",
+							name = "hauptrad_2",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.000284, 0, 0.5351, 1, },
 						},
 						{ 
@@ -1150,7 +1150,7 @@ return {
 							},
 							materials = { "mat/rumpf5.mtl", },
 							mesh = "msh/bugrad_lod0.msh",
-							name = "a1",
+							name = "bugrad",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
 						},
 						{ 
@@ -6647,7 +6647,7 @@ return {
 							},
 							materials = { "mat/rumpf5.mtl", },
 							mesh = "msh/bugrad_lod0.msh",
-							name = "a2",
+							name = "bugrad",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
 						},
 						{ 
@@ -11989,7 +11989,7 @@ return {
 							},
 							materials = { "mat/rumpf5.mtl", },
 							mesh = "msh/bugrad_lod0.msh",
-							name = "a3",
+							name = "bugrad",
 							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10.989, 0, 0.52096, 1, },
 						},
 						{ 
@@ -12864,14 +12864,27 @@ return {
 		},
 		metadata = { 
 			airVehicle = { 
-				axles = { },
+				axles = { 
+					{ 
+						position = { 1.6639, 0.5351, },
+						radius = 0.5351,
+					},
+					{ 
+						position = { 0.000284, 0.5351, },
+						radius = 0.5351,
+					},
+				},
 				config = { 
-					axleRadii = { },
-					axles = { },
-					fakeBogies = { },
-					steeringParts = { "a1", },
-					wheelRadii = { 0, 0, 0, },
-					wheels = { "a1", "a2", "a3", },
+					axleRadii = { 0, 0, 0,},
+					axles = { "hauptrad_1", "hauptrad_2",  },
+					fakeBogies = { 
+						{ },
+						{ },
+						{ },
+					},
+					steeringParts = { "bugrad", },
+					wheelRadii = { 0, },
+					wheels = { "bugrad",  },
 				},
 				idleThrust = 10,
 				maxThrust = 170000,
@@ -12879,7 +12892,12 @@ return {
 				topSpeed = 142.5,
 				weightEmpty = 29000,
 				weightMaxPayload = 25000,
-				wheels = { },
+				wheels = { 
+					{ 
+						position = { 10.989, 0.52096, },
+						radius = 0.52096,
+					},
+				},
 				wingArea = 160,
 			},
 			availability = { 
